@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <RMCore/RMCore.h>
 
+#import "CVFRomoHandlerDelegate.h"
+
 @interface CVFRomoHandler : NSObject<RMCoreDelegate>
 
 - (void)move:(float)seconds;
 - (void)rotate:(float)angle;
+
+@property (nonatomic, weak) NSObject<CVFRomoHandlerDelegate> *delegate;
 
 @end

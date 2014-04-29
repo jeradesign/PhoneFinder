@@ -10,6 +10,7 @@
 		4255FD55190F3FBE00903C07 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4255FD54190F3FBE00903C07 /* RMCore.framework */; };
 		4255FD58190F420100903C07 /* CVFRomoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4255FD56190F420100903C07 /* CVFRomoHandler.m */; };
 		4255FD5A190F44B000903C07 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4255FD59190F44B000903C07 /* ExternalAccessory.framework */; };
+		4255FD60190F552600903C07 /* PhoneFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4255FD5F190F552600903C07 /* PhoneFinder.m */; };
 		42E0735A190F2319006316F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E07359190F2319006316F8 /* Foundation.framework */; };
 		42E0735C190F2319006316F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E0735B190F2319006316F8 /* CoreGraphics.framework */; };
 		42E0735E190F2319006316F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E0735D190F2319006316F8 /* UIKit.framework */; };
@@ -41,6 +42,10 @@
 		4255FD56190F420100903C07 /* CVFRomoHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CVFRomoHandler.m; sourceTree = "<group>"; };
 		4255FD57190F420100903C07 /* CVFRomoHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CVFRomoHandler.h; sourceTree = "<group>"; };
 		4255FD59190F44B000903C07 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		4255FD5E190F552600903C07 /* PhoneFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneFinder.h; sourceTree = "<group>"; };
+		4255FD5F190F552600903C07 /* PhoneFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneFinder.m; sourceTree = "<group>"; };
+		4255FD64190F5EE600903C07 /* PhoneFinderDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneFinderDelegate.h; sourceTree = "<group>"; };
+		4255FD65190F72D800903C07 /* CVFRomoHandlerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CVFRomoHandlerDelegate.h; sourceTree = "<group>"; };
 		42E07356190F2319006316F8 /* PhoneFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E07359190F2319006316F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42E0735B190F2319006316F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,6 +137,10 @@
 				42E0736F190F2319006316F8 /* ViewController.m */,
 				4255FD57190F420100903C07 /* CVFRomoHandler.h */,
 				4255FD56190F420100903C07 /* CVFRomoHandler.m */,
+				4255FD65190F72D800903C07 /* CVFRomoHandlerDelegate.h */,
+				4255FD5E190F552600903C07 /* PhoneFinder.h */,
+				4255FD5F190F552600903C07 /* PhoneFinder.m */,
+				4255FD64190F5EE600903C07 /* PhoneFinderDelegate.h */,
 				42E07371190F2319006316F8 /* Images.xcassets */,
 				42E07360190F2319006316F8 /* Supporting Files */,
 			);
@@ -268,6 +277,7 @@
 				4255FD58190F420100903C07 /* CVFRomoHandler.m in Sources */,
 				42E0736A190F2319006316F8 /* AppDelegate.m in Sources */,
 				42E07366190F2319006316F8 /* main.m in Sources */,
+				4255FD60190F552600903C07 /* PhoneFinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

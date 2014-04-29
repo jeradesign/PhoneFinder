@@ -9,8 +9,6 @@
 #import "CVFRomoHandler.h"
 #import <RMCore/RMCore.h>
 
-static CVFRomoHandler *g_romo;
-
 @interface CVFRomoHandler() {
     RMCoreRobot<HeadTiltProtocol, DriveProtocol, LEDProtocol> *_robot;
     BOOL _moving;
@@ -69,9 +67,9 @@ static CVFRomoHandler *g_romo;
     
     dispatch_async(high_queue, ^{
         if (distance > 0) {
-            [_robot driveForwardWithSpeed:0.5];
+            [_robot driveForwardWithSpeed:1.0];
         } else {
-            [_robot driveBackwardWithSpeed:0.5];
+            [_robot driveBackwardWithSpeed:1.0];
         }
     });
     
@@ -81,6 +79,7 @@ static CVFRomoHandler *g_romo;
         [self logMessage:@"stopping"];
         [_robot stopDriving];
         _moving = NO;
+        [self.delegate doneMoving];
     });
 }
 
@@ -96,6 +95,7 @@ static CVFRomoHandler *g_romo;
         (void)success;
         (void)heading;
         _moving = NO;
+        [self.delegate doneMoving];
     }];
 }
 
