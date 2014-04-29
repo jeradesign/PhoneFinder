@@ -53,6 +53,7 @@
 		42E07380190F2319006316F8 /* PhoneFinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhoneFinderTests-Info.plist"; sourceTree = "<group>"; };
 		42E07382190F2319006316F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		42E07384190F2319006316F8 /* PhoneFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhoneFinderTests.m; sourceTree = "<group>"; };
+		42E0738E190F2373006316F8 /* ToDo.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = ToDo.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		42E0734D190F2318006316F8 = {
 			isa = PBXGroup;
 			children = (
+				42E0738E190F2373006316F8 /* ToDo.rtf */,
 				42E0735F190F2319006316F8 /* PhoneFinder */,
 				42E0737E190F2319006316F8 /* PhoneFinderTests */,
 				42E07358190F2319006316F8 /* Frameworks */,
@@ -456,6 +458,7 @@
 				42E0738A190F2319006316F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42E0738B190F2319006316F8 /* Build configuration list for PBXNativeTarget "PhoneFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +467,7 @@
 				42E0738D190F2319006316F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
