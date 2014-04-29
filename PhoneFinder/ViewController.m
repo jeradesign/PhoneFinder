@@ -8,11 +8,13 @@
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "CVFRomoHandler.h"
 
 @interface ViewController () {
     CLLocationManager *_locationManager;
     CLBeaconRegion *_region;
     NSUUID *_uuid;
+    CVFRomoHandler *_romoHandler;
 }
 @property (weak, nonatomic) IBOutlet UITextView *logView;
 
@@ -28,6 +30,7 @@
     _region = [[CLBeaconRegion alloc] initWithProximityUUID:_uuid identifier:@"phone"];
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
+    _romoHandler = [[CVFRomoHandler alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,6 +42,7 @@
 - (IBAction)goAction:(id)sender {
     self.logView.text = @"Going!\n";
     [_locationManager startRangingBeaconsInRegion:_region];
+    [_romoHandler move:15.0];
 }
 
 #pragma mark - CLLocationManagerDelegate methods
@@ -46,6 +50,10 @@
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
 #pragma unused(manager)
 #pragma unused(region)
+//    if (beacons.count) {
+//        CLBeacon *beacon = beacons[0];
+//        _logView.text = [NSString stringWithFormat:@"rssi: %ld", (long)(beacon.rssi)];
+//    }
     for (CLBeacon *beacon in beacons) {
         [self log:[NSString stringWithFormat:@"rssi: %ld", (long)(beacon.rssi)]];
     }
@@ -58,10 +66,11 @@
 #pragma mark - Logging
 
 - (void)log:(NSString *)message {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.logView.text = [NSString stringWithFormat:@"%@%@\n", self.logView.text, message];
-        [self.logView scrollRangeToVisible:NSMakeRange([self.logView.text length], 0)];
-    });
+    NSLog(@"%@", message);
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        self.logView.text = [NSString stringWithFormat:@"%@%@\n", self.logView.text, message];
+//        [self.logView scrollRangeToVisible:NSMakeRange([self.logView.text length], 0)];
+//    });
 //    if (self.logView.contentSize.height > self.logView.frame.size.height) {
 //        CGPoint offset = CGPointMake(0, self.logView.contentSize.height - self.logView.frame.size.height);
 //        [self.logView setContentOffset:offset animated:YES];
